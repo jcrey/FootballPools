@@ -10,13 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
     <title>@ViewBag.Title</title>
-    <link href="~/Content/bootstrap.css" rel="stylesheet">
-    <link href="~/Content/bootstrapValidator.css" rel="stylesheet">
-    <link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet">
-    <link href="~/Content/jquery_ui/jquery-ui.min.css" rel="stylesheet">
-    <link href="~/Content/bs_pagination/jquery.bs_pagination.min.css" rel="stylesheet">
-    <link href="~/Content/jui_filter/jquery.jui_filter_rules.bs.min.css" rel="stylesheet">
-    <link href="~/Content/bs_grid/jquery.bs_grid.min.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
 
     <script src="~/Scripts/require.config.js"></script>
@@ -31,10 +25,7 @@
 
     <![endif]-->
 </head>
-<body cz-shortcut-listen="true">
-
-
-
+<body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         
         <div class="navbar-header">
@@ -56,22 +47,6 @@
                     <ul class="nav navbar-nav">
                         <li @if (ViewBag.page == "Home") { <text> class=" active" </text>   ; }><a href="/">Home</a></li>
                     </ul>
-                    @if (Request.IsAuthenticated)
-                    {
-                        using (Html.BeginForm("LogOff", "SignOn", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-                        {
-                            @Html.AntiForgeryToken()
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log out</a></li>
-                            </ul>
-                        }
-                    }
-                    else
-                    {
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>@Html.ActionLink("SignUp", "Create", "Crmuser", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
-                        </ul>
-                    }
                 </div>
                 
                 <!--/.nav-collapse -->

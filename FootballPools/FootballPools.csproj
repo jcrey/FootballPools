@@ -39,16 +39,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DataAccess.Scaffold">
-      <HintPath>..\packages\Needletail.DataAccess.1.1\lib\net451\DataAccess.Scaffold.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Needletail.DataAccess.1.1\lib\net451\Microsoft.SqlServer.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Needletail.DataAccess">
-      <HintPath>..\packages\Needletail.DataAccess.1.1\lib\net451\Needletail.DataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -184,148 +178,65 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CrmuserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SignOnController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Crmuser.cs" />
-    <Compile Include="Models\EmailMessages.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Role.cs" />
-    <Compile Include="Models\Userrole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\ConfigData.cs" />
-    <Compile Include="Utils\EmailOperations.cs" />
     <Compile Include="Utils\Encryption.cs" />
     <Compile Include="Utils\FileUtils.cs" />
-    <Compile Include="Utils\UserIdentityExtensions.cs" />
-    <Content Include="Scripts\app\Account.binding.js" />
-    <Content Include="Scripts\app\Account.controller.js" />
-    <Content Include="Scripts\app\Account.validate.js" />
-    <Content Include="Scripts\app\Crmuser.binding.js" />
-    <Content Include="Scripts\app\Crmuser.controller.js" />
-    <Content Include="Scripts\app\Crmuser.validate.js" />
-    <Content Include="Scripts\bootstrap.typeahead.js" />
-    <Content Include="Scripts\bs_grid\jquery.bs_grid.js" />
-    <Compile Include="Repositories\CrmuserRepository.cs" />
-    <Compile Include="Repositories\EmailmessagesRepository.cs" />
-    <Compile Include="Repositories\RoleRepository.cs" />
-    <Compile Include="Repositories\UserroleRepository.cs" />
     <Compile Include="Startup.cs" />
-    <Content Include="Scripts\gremlins.min.js" />
-    <Content Include="Scripts\growl\jquery.growl.js" />
-    <Content Include="Scripts\require.config.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\bootstrap-datetimepicker.css" />
-    <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrapValidator.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Icon.png" />
+    <Content Include="Scripts\angularjs\angular-animate.js" />
+    <Content Include="Scripts\angularjs\angular-animate.min.js" />
+    <Content Include="Scripts\angularjs\angular-aria.js" />
+    <Content Include="Scripts\angularjs\angular-aria.min.js" />
+    <Content Include="Scripts\angularjs\angular-cookies.js" />
+    <Content Include="Scripts\angularjs\angular-cookies.min.js" />
+    <Content Include="Scripts\angularjs\angular-csp.css" />
+    <Content Include="Scripts\angularjs\angular-loader.js" />
+    <Content Include="Scripts\angularjs\angular-loader.min.js" />
+    <Content Include="Scripts\angularjs\angular-message-format.js" />
+    <Content Include="Scripts\angularjs\angular-message-format.min.js" />
+    <Content Include="Scripts\angularjs\angular-messages.js" />
+    <Content Include="Scripts\angularjs\angular-messages.min.js" />
+    <Content Include="Scripts\angularjs\angular-mocks.js" />
+    <Content Include="Scripts\angularjs\angular-resource.js" />
+    <Content Include="Scripts\angularjs\angular-resource.min.js" />
+    <Content Include="Scripts\angularjs\angular-route.js" />
+    <Content Include="Scripts\angularjs\angular-route.min.js" />
+    <Content Include="Scripts\angularjs\angular-sanitize.js" />
+    <Content Include="Scripts\angularjs\angular-sanitize.min.js" />
+    <Content Include="Scripts\angularjs\angular-scenario.js" />
+    <Content Include="Scripts\angularjs\angular-touch.js" />
+    <Content Include="Scripts\angularjs\angular-touch.min.js" />
+    <Content Include="Scripts\angularjs\angular.js" />
+    <Content Include="Scripts\angularjs\angular.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\require.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap\wells.less" />
-    <Content Include="Content\bootstrap\variables.less" />
-    <Content Include="Content\bootstrap\utilities.less" />
-    <Content Include="Content\bootstrap\type.less" />
-    <Content Include="Content\bootstrap\tooltip.less" />
-    <Content Include="Content\bootstrap\thumbnails.less" />
-    <Content Include="Content\bootstrap\theme.less" />
-    <Content Include="Content\bootstrap\tables.less" />
-    <Content Include="Content\bootstrap\scaffolding.less" />
-    <Content Include="Content\bootstrap\responsive-utilities.less" />
-    <Content Include="Content\bootstrap\progress-bars.less" />
-    <Content Include="Content\bootstrap\print.less" />
-    <Content Include="Content\bootstrap\popovers.less" />
-    <Content Include="Content\bootstrap\panels.less" />
-    <Content Include="Content\bootstrap\pagination.less" />
-    <Content Include="Content\bootstrap\pager.less" />
-    <Content Include="Content\bootstrap\normalize.less" />
-    <Content Include="Content\bootstrap\navs.less" />
-    <Content Include="Content\bootstrap\navbar.less" />
-    <Content Include="Content\bootstrap\modals.less" />
-    <Content Include="Content\bootstrap\mixins.less" />
-    <Content Include="Content\bootstrap\media.less" />
-    <Content Include="Content\bootstrap\list-group.less" />
-    <Content Include="Content\bootstrap\labels.less" />
-    <Content Include="Content\bootstrap\jumbotron.less" />
-    <Content Include="Content\bootstrap\input-groups.less" />
-    <Content Include="Content\bootstrap\grid.less" />
-    <Content Include="Content\bootstrap\glyphicons.less" />
-    <Content Include="Content\bootstrap\forms.less" />
-    <Content Include="Content\bootstrap\dropdowns.less" />
-    <Content Include="Content\bootstrap\component-animations.less" />
-    <Content Include="Content\bootstrap\code.less" />
-    <Content Include="Content\bootstrap\close.less" />
-    <Content Include="Content\bootstrap\carousel.less" />
-    <Content Include="Content\bootstrap\buttons.less" />
-    <Content Include="Content\bootstrap\button-groups.less" />
-    <Content Include="Content\bootstrap\breadcrumbs.less" />
-    <Content Include="Content\bootstrap\bootstrap.less" />
-    <Content Include="Content\bootstrap\badges.less" />
-    <Content Include="Content\bootstrap\alerts.less" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\less\bootstrap-datetimepicker-build.less" />
-    <Content Include="Content\less\bootstrap-datetimepicker.less" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\bootstrap-datetimepicker.js" />
-    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrapValidator.js" />
-    <Content Include="Scripts\bs_pagination\en.min.js" />
-    <Content Include="Content\bs_pagination\jquery.bs_pagination.min.css" />
-    <Content Include="Scripts\bs_pagination\jquery.bs_pagination.min.js" />
-    <Content Include="Scripts\bs_grid\en.min.js" />
-    <Content Include="Content\jquery_ui\jquery-ui.min.css" />
-    <Content Include="Scripts\jquery_ui\jquery-ui.min.js" />
-    <Content Include="Content\bs_grid\jquery.bs_grid.min.css" />
-    <Content Include="Scripts\bs_grid\jquery.bs_grid.min.js" />
-    <Content Include="Scripts\jui_filter\en.min.js" />
-    <Content Include="Content\jui_filter\jquery.jui_filter_rules.bs.min.css" />
-    <Content Include="Scripts\jui_filter\jquery.jui_filter_rules.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-3.2.0.debug.js" />
-    <Content Include="Scripts\knockout-3.2.0.js" />
-    <Content Include="Scripts\less-1.4.1.min.js" />
     <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\moment-with-locales.js" />
-    <Content Include="Scripts\moment-with-locales.min.js" />
-    <Content Include="Scripts\moment.js" />
-    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\require.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\spinjs.js" />
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\Utils.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -336,22 +247,31 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Crmuser\Create.cshtml" />
-    <Content Include="Views\Crmuser\Details.cshtml" />
-    <Content Include="Views\Crmuser\Edit.cshtml" />
-    <Content Include="Views\Crmuser\Index.cshtml" />
-    <Content Include="Views\SignOn\ForgotPassword.cshtml" />
-    <Content Include="Views\SignOn\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
     <None Include="Project_Readme.html" />
+    <Content Include="Scripts\version.json" />
+    <Content Include="Scripts\errors.json" />
+    <Content Include="Scripts\angularjs\angular-touch.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-route.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-resource.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-messages.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-message-format.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-loader.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-cookies.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-aria.min.js.map" />
+    <Content Include="Scripts\angularjs\angular-animate.min.js.map" />
+    <Content Include="Scripts\angularjs\angular.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
